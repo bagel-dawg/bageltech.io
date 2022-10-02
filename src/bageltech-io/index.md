@@ -30,6 +30,7 @@ Principal Infrastructure Engineer, SRE Team
 *    Provided site reliability for customers running in Swimlane's Dedicated Cloud platform.
 *    Provided support for the on-prem version of the Swimlane product, deployed on top of kURL (a kubeadm-based distro) + KOTS.
 *    Ground-up design and implementation of the Swimlane Cloud platform.
+*    Individual contributor for a number of closed and open-sourced Swimlane repositories.
 
 ## Alion Science and Technology
 Oct 2018 - June 2019
@@ -60,3 +61,9 @@ Old Dominion University, 2017
 # Certifications
 COMPTIA Security+ (Verification: 2RMBVDTGYHRQQR53), Dec 2018
 COMPTIA Linux+ / LPIC-1 (Verification: Q7J FPK6PFHR4QDKZ), Nov 2018
+
+
+# Personal Projects
+[Online CV](htttps://github.com/bagel-dawg/bageltech-io). This project is what is used to host this website (https://bageltech.io). It includes not only the website's content, but also the terraform code for the underlying infrastructure, as well as the CICD process. This repo is meant to showcase competancy in using AWS and CICD to publish a simple website that is declaratively defined.
+
+[Github Slack Mentions](https://github.com/bagel-dawg/github-slack-mentions). This project's purpose is to notify users
