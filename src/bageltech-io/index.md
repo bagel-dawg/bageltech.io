@@ -57,6 +57,6 @@ Systems Engineer
 ## Bachelor of Science in Cyber Security, minor in Computer Science
 Old Dominion University, 2017
 
-# Certificates
+# Certifications
 COMPTIA Security+ (Verification: 2RMBVDTGYHRQQR53), Dec 2018
 COMPTIA Linux+ / LPIC-1 (Verification: Q7J FPK6PFHR4QDKZ), Nov 2018
