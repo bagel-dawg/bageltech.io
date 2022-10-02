@@ -3,6 +3,7 @@ plugins:
 - jekyll-remote-theme
 title: Ryan Knauer
 description: Online CV for Ryan Knauer
+logo: images/photo.png
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
