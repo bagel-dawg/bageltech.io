@@ -21,6 +21,7 @@ jobs:
           bundler-cache: true
 
       - name: Gem Dependencies
+        working-directory: src/bageltech-io
         run: |
           gem install bundler
           bundle install
