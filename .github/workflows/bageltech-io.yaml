@@ -42,13 +42,13 @@ jobs:
           bundle exec htmlproofer ./_site --check-html --check-sri
 
       - name: Configure AWS credentials
-        # if: github.event_name == 'release'
+        if: github.event_name == 'release'
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::204361647268:role/bageltech-io-cicd
           aws-region: us-east-1
 
       - name: Publish to bageltech.io bucket
-        # if: github.event_name == 'release'
+        if: github.event_name == 'release'
         run: | 
           aws --region us-east-1 s3 sync src/bageltech-io/_site s3://bageltech.io --delete
