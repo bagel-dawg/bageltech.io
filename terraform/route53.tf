@@ -28,3 +28,17 @@ resource "aws_route53_record" "ns_records" {
   ttl      = "172800"
   records  = aws_route53_zone.zones[each.key].name_servers
 }
+
+# resource "aws_route53_record" "bageltech_io" {
+#   zone_id  = aws_route53_zone.zones["bageltech-io"].zone_id
+#   name     = "bageltech.io"
+#   type     = "A"
+
+
+#   alias {
+#     name                   = aws_cloudfront_distribution.s3_distribution.domain_name
+#     zone_id                = aws_cloudfront_distribution.s3_distribution.hosted_zone_id
+#     evaluate_target_health = true
+#   }
+
+# }

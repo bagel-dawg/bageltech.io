@@ -13,3 +13,8 @@ github:
   zip_url: https://github.com/bagel-dawg/bageltech.io/releases/latest
   tar_url: https://github.com/bagel-dawg/bageltech.io/tree/main/src/bageltech-io
   repository_url: https://github.com/bagel-dawg/bageltech.io/tree/main/src/bageltech-io
+
+exclude:
+  - "Gemfile"
+  - "*.gemspec"
+  - "README.md"
