@@ -4,13 +4,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     origin_id   = "bageltech-io"
   }
 
-  aliases = ["bageltech.io"]
-
   enabled             = true
   default_root_object = "index.html"
 
   default_cache_behavior {
-    allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+    allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "bageltech-io"
     viewer_protocol_policy = "allow-all"
