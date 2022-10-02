@@ -15,7 +15,7 @@ jobs:
     name: Jekyll Build
     defaults:
       run:
-        working-directory: terraform
+        working-directory: src/bageltech-io
     steps:
       - uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
@@ -31,11 +31,6 @@ jobs:
       - name: Generate site
         run: |
           bundle exec jekyll build 
-
-      - name: Generate resume as PDF
-        run: |
-          cd _site/
-          sudo apt-get install pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
 
       - name: Test site for valid HTML
         run: |
