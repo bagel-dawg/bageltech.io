@@ -42,7 +42,7 @@ jobs:
         # if: github.event_name == 'release'
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::204361647268:role/bageltech-io
+          role-to-assume: arn:aws:iam::204361647268:role/bageltech-io-cicd
           aws-region: us-east-1
 
       - name: "Publish to S3"
