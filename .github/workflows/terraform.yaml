@@ -13,7 +13,11 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
     name: Run terraform
+    defaults:
+      run:
+        working-directory: terraform
     steps:
+
       - uses: actions/checkout@v2
 
       - name: Configure AWS credentials
@@ -29,13 +33,11 @@ jobs:
           ./terraform version
 
       - name: Run and save Terraform Plan
-        working-directory: terraform
         run: | 
           ./terraform init
           ./terraform plan -no-color -input=false -out tfplan
 
       - name: Run terraform apply on release
         if: github.event_name == 'release'
-        working-directory: terraform
         run: | 
           ./terraform apply -no-color -input=false -auto-approve tfplan
