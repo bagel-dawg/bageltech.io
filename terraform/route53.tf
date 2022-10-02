@@ -1,36 +1,23 @@
-locals {
-    route53_zones = {
-        "bageltech-io" = {
-          fqdn = "bageltech.io"
-        },
-        "bageltechnologies-com" = {
-          fqdn = "bageltechnologies.com"
-        }
-    }
-}
-
-resource "aws_route53_zone" "zones" {
-  for_each = local.route53_zones
-  name     = each.value.fqdn
+resource "aws_route53_zone" "zone" {
+  name     = "bageltech.io"
 
   tags = {
-    Name        = each.key
+    Name        = "bageltech.io"
     Environment = var.environment
   }
 
 }
 
 resource "aws_route53_record" "ns_records" {
-  for_each = local.route53_zones
-  zone_id  = aws_route53_zone.zones[each.key].zone_id
-  name     = each.value.fqdn
+  zone_id  = aws_route53_zone.zone.zone_id
+  name     = "bageltech.io"
   type     = "NS"
   ttl      = "172800"
-  records  = aws_route53_zone.zones[each.key].name_servers
+  records  = aws_route53_zone.zone.name_servers
 }
 
 resource "aws_route53_record" "bageltech_io" {
-  zone_id  = aws_route53_zone.zones["bageltech-io"].zone_id
+  zone_id  = aws_route53_zone.zone.zone_id
   name     = "bageltech.io"
   type     = "A"
 
