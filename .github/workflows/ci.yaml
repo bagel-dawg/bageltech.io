@@ -1,0 +1,46 @@
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Jekyll Build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+
+      - name: Gem Dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Generate site and rune some tests
+        working-directory: src/bageltech-io
+        run: |
+          bundle exec jekyll build 
+          bundle exec htmlproofer ./_site --check-html --check-sri
+
+      - name: Publish to bageltech.io bucket
+        working-directory: src/bageltech-io
+        run: |
+          bundle exec jekyll build 
+          bundle exec htmlproofer ./_site --check-html --check-sri
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::204361647268:role/bageltech-io
+          aws-region: us-east-1
+
+      - name: "Publish to S3"
+        run: |
+          aws --region us-east-1 s3 sync src/bageltech-io/_site s3://bageltech.io
