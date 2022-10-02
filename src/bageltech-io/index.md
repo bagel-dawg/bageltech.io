@@ -22,6 +22,7 @@ layout: default
 
 ## Swimlane
 June 2019 - Current
+
 Principal Infrastructure Engineer, SRE Team
 
 *    Managed CICD pipelines on Github Actions, with custom ephemeral EC2-based self-hosted agents.
@@ -32,6 +33,7 @@ Principal Infrastructure Engineer, SRE Team
 
 ## Alion Science and Technology
 Oct 2018 - June 2019
+
 Linux Administrator
 
 *    Required SCI security clearance (no longer active).
@@ -42,6 +44,7 @@ Linux Administrator
 
 ## Systems Group, Old Dominion University
 Feb 2014 - Oct 2018
+
 Systems Engineer
 
 *    Windows Administration and Linux Administration
