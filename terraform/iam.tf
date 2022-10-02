@@ -21,9 +21,9 @@ resource "aws_iam_role" "cicd" {
       Condition = {
         "ForAnyValue:StringLike" = {
           "token.actions.githubusercontent.com:sub" : [
-            "repo:bagel-dawg/bageltech-io:ref:refs/tags/*",
-            "repo:bagel-dawg/bageltech-io:ref:refs/heads/main",
-            "repo:bagel-dawg/bageltech-io:ref:refs/heads/release*"
+            "repo:bagel-dawg/bageltech.io:ref:refs/tags/*",
+            "repo:bagel-dawg/bageltech.io:ref:refs/heads/main",
+            "repo:bagel-dawg/bageltech.io:ref:refs/heads/release*"
           ]
         }
       }
