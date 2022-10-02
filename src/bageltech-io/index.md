@@ -4,13 +4,11 @@ layout: default
 # Qualifications
 
 ## Amazon Web Services (AWS)
-
 *   EC2, EKS, IAM, SSO, S3
 *   VPC, Transit Gateway, Network Firewall
 *   Functional experience using AWS and serverless architecture
 
 ## Kubernetes
-
 *   EKS, AKS, kubeadm-based on-prem deployments
 *   ArgoCD, Kustomize, Helm, FluxCD
 *   Autoscaler, Traefik Ingress Controller, ExternalSecrets, ExternalDNS, Prometheus
