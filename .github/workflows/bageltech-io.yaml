@@ -13,6 +13,9 @@ jobs:
   jekyll-build:
     runs-on: ubuntu-latest
     name: Jekyll Build
+    defaults:
+      run:
+        working-directory: terraform
     steps:
       - uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
@@ -21,21 +24,21 @@ jobs:
           bundler-cache: true
 
       - name: Gem Dependencies
-        working-directory: src/bageltech-io
         run: |
           gem install bundler
           bundle install
 
-      - name: Generate site and rune some tests
-        working-directory: src/bageltech-io
+      - name: Generate site
         run: |
           bundle exec jekyll build 
-          bundle exec htmlproofer ./_site --check-html --check-sri
 
-      - name: Publish to bageltech.io bucket
-        working-directory: src/bageltech-io
+      - name: Generate resume as PDF
         run: |
-          bundle exec jekyll build 
+          cd _site/
+          sudo apt-get install pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+
+      - name: Test site for valid HTML
+        run: |
           bundle exec htmlproofer ./_site --check-html --check-sri
 
       - name: Configure AWS credentials
@@ -45,7 +48,7 @@ jobs:
           role-to-assume: arn:aws:iam::204361647268:role/bageltech-io-cicd
           aws-region: us-east-1
 
-      - name: "Publish to S3"
+      - name: Publish to bageltech.io bucket
         # if: github.event_name == 'release'
         run: | 
           aws --region us-east-1 s3 sync src/bageltech-io/_site s3://bageltech.io --delete
