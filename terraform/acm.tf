@@ -2,6 +2,8 @@ resource "aws_acm_certificate" "certificate" {
   domain_name       = "bageltech.io"
   validation_method = "DNS"
 
+  subject_alternative_names = ["origin.bageltech.io"]
+
   tags = {
     Environment = var.environment
   }
@@ -28,7 +30,7 @@ resource "aws_route53_record" "certificate" {
   zone_id         = aws_route53_zone.zone.zone_id
 }
 
-resource "aws_acm_certificate_validation" "certificate" {
-  certificate_arn         = aws_acm_certificate.certificate.arn
-  validation_record_fqdns = [for record in aws_route53_record.certificate : record.fqdn]
-}
+# resource "aws_acm_certificate_validation" "certificate" {
+#   certificate_arn         = aws_acm_certificate.certificate.arn
+#   validation_record_fqdns = [for record in aws_route53_record.certificate : record.fqdn]
+# }
