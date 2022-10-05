@@ -2,7 +2,7 @@ resource "aws_acm_certificate" "certificate" {
   domain_name       = "bageltech.io"
   validation_method = "DNS"
 
-  subject_alternative_names = ["origin.bageltech.io"]
+  subject_alternative_names = ["*.bageltech.io"]
 
   tags = {
     Environment = var.environment

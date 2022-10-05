@@ -1,23 +1,22 @@
 resource "aws_cloudfront_distribution" "s3_distribution" {
-  origin {
-    domain_name = aws_s3_bucket.bageltech_io.bucket_regional_domain_name
-    origin_id   = "bageltech-io"
-  }
-
   enabled             = true
   default_root_object = "index.html"
+  aliases             = ["bageltech.io"]
 
-  aliases = ["origin.bageltech.io"]
+  origin {
+    domain_name              = aws_s3_bucket.bageltech_io.bucket_regional_domain_name
+    origin_id                = "bageltech-io"
+    origin_access_control_id = aws_cloudfront_origin_access_control.s3_distribution.id
+  }
 
   default_cache_behavior {
-    allowed_methods  = ["GET", "HEAD"]
-    cached_methods   = ["GET", "HEAD"]
-    target_origin_id = "bageltech-io"
+    allowed_methods        = ["GET", "HEAD"]
+    cached_methods         = ["GET", "HEAD"]
+    target_origin_id       = "bageltech-io"
     viewer_protocol_policy = "redirect-to-https"
 
     forwarded_values {
       query_string = false
-
       cookies {
         forward = "none"
       }
@@ -39,4 +38,11 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   tags = {
     Environment = var.environment
   }
+}
+
+resource "aws_cloudfront_origin_access_control" "s3_distribution" {
+  name                              = "bageltech-io-s3-origin"
+  origin_access_control_origin_type = "s3"
+  signing_behavior                  = "always"
+  signing_protocol                  = "sigv4"
 }
