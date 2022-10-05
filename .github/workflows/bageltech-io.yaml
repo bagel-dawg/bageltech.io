@@ -46,4 +46,4 @@ jobs:
       - name: Publish to bageltech.io bucket
         if: github.event_name == 'release'
         run: | 
-          aws --region us-east-1 s3 sync _site s3://bageltech.io --delete
+          aws --region us-east-1 s3 sync _site s3://bageltech-io --delete
