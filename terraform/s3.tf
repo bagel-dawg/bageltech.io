@@ -7,6 +7,12 @@ resource "aws_s3_bucket" "bageltech_io" {
   }
 }
 
+
+resource "aws_s3_bucket_acl" "bageltech_io" {
+  bucket = aws_s3_bucket.bageltech_io.id
+  acl    = "private"
+}
+
 # Allow access to s3 via cloudfront origin
 resource "aws_s3_bucket_policy" "bageltech_io" {
   bucket = aws_s3_bucket.bageltech_io.id
