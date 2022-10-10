@@ -64,7 +64,7 @@ COMPTIA Linux+ / LPIC-1 (Verification: Q7J FPK6PFHR4QDKZ), Nov 2018
 
 
 # Personal Projects
-[Online CV](htttps://github.com/bagel-dawg/bageltech-io). This project is what is used to host [my online CV](htttps://bageltech.io). It includes not only the website's content, but also the terraform code for the underlying infrastructure, as well as the CICD process. This repo is meant to showcase competancy in using AWS and CICD to publish a simple website that is declaratively defined.
+[Online CV](https://github.com/bagel-dawg/bageltech-io). This project is what is used to host [my online CV](https://bageltech.io). It includes not only the website's content, but also the terraform code for the underlying infrastructure, as well as the CICD process. This repo is meant to showcase competancy in using AWS and CICD to publish a simple website that is declaratively defined.
 
 [screensaver / screenserver](https://github.com/bagel-dawg/screensaver). A self-hosted version of the popular tool "Gyazo". It takes screenshots and stores them into an object store. This can be used to self-host screenshots to share with friends or collegues, and can easily be adapted to use a vanity domain. It is hosted in AWS using API Gateway, Lambda, and S3. Images are stored under this vanity domain and are served by CloudFront.
 
