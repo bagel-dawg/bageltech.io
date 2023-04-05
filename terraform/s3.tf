@@ -43,3 +43,18 @@ data "aws_iam_policy_document" "bageltech_io" {
 
   }
 }
+
+resource "aws_s3_bucket" "bageltech_loki" {
+  bucket = "bageltech-loki"
+
+  tags = {
+    Name        = "bageltech-loki"
+    Environment = var.environment
+  }
+}
+
+# Bucket for Loki monitoring
+resource "aws_s3_bucket_acl" "bageltech_loki" {
+  bucket = aws_s3_bucket.bageltech_loki.id
+  acl    = "private"
+}
