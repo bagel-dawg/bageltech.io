@@ -52,8 +52,8 @@ jobs:
         run: | 
           aws --region us-east-1 s3 sync _site s3://bageltech-io --delete
 
-      - name: Upload Resume to release
-        if: github.event_name == 'release'
-        uses: softprops/action-gh-release@v1
-        with:
-          files: RyanKnauerResume.pdf
+      # - name: Upload Resume to release
+      #   if: github.event_name == 'release'
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     files: RyanKnauerResume.pdf
