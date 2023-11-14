@@ -26,12 +26,13 @@ June 2019 - Current
 
 Principal Infrastructure Engineer, SRE Team
 
-*    Desgiend and Maintained CICD pipelines on Github Actions with custom ephemeral EC2-based self-hosted agents.
-*    Ground-up design and implementation of the Swimlane Cloud Turbine Cloud Kubernetes platforms.
+*    Designed and Maintained CICD pipelines on Github Actions with custom ephemeral EC2-based self-hosted agents.
+*    Ground-up design and implementation of the Swimlane Cloud and Turbine Cloud Kubernetes platforms across 8 regions.
 *    Provided site reliability for customers running in Swimlane's Dedicated Cloud and Turbine Cloud platform.
 *    Managed multi-region cloud-native Kubernetes clusters containing hundereds of nodes per region.
 *    Managed dozens of individual Kubernetes clusters with hundereds of individual nodes combined.
 *    Provided last-escelation level support for the on-prem version of the Swimlane product deployed on top of a kubeadm-based distro + KOTS.
+*    Write and maintain internal tooling to enable observability and to tackle operational pain points.
 
 ## Alion Science and Technology
 Oct 2018 - June 2019
