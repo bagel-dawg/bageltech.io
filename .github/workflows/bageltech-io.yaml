@@ -38,8 +38,6 @@ jobs:
 
       - name: Test site for valid HTML
         run: |
-          ls -la
-          ls -la ./_site
           bundle exec htmlproofer ./_site --check-html --check-sri
 
       - name: Configure AWS credentials
@@ -56,8 +54,6 @@ jobs:
 
       - name: Upload Resume to release
         if: github.event_name == 'release'
-        uses: svenstaro/upload-release-action@v2
+        uses: softprops/action-gh-release@v1
         with:
-          file: RyanKnauerResume.pdf
-          asset_name: RyanKnauerResume.pdf
-          tag: ${{ github.ref }}
+          files: RyanKnauerResume.pdf
