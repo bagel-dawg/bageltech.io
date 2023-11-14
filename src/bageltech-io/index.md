@@ -4,20 +4,23 @@ layout: default
 # Qualifications
 
 ## Amazon Web Services (AWS)
-*   EC2, EKS, IAM, SSO, S3
-*   VPC, Transit Gateway, Network Firewall
-*   Functional experience using AWS and serverless architecture
-*   Cloud Cost: EC2 Spot Fleet, AWS EC2 Savings Plan, KubeCost
+*   EC2, EKS, IAM, SSO, S3.
+*   VPC, Transit Gateway, Network Firewall.
+*   Functional experience using AWS and serverless architecture.
+*   Cloud Cost: EC2 Spot Fleet, AWS EC2 Savings Plan, KubeCost.
 
 ## Kubernetes
-*   EKS, AKS, kubeadm-based on-prem deployments
-*   ArgoCD, Kustomize, Helm, FluxCD
-*   Karpenter, Prometheus, MongoDB, RabbitMQ, PostgreSQL
+*   EKS, AKS, kubeadm-based on-prem deployments.
+*   ArgoCD, Kustomize, Helm, FluxCD.
+*   Karpenter, Prometheus, ExternalSecrets, Velero.
+*   Experienceed in managing stateful and stateless workloads: MongoDB, RabbitMQ, PostgreSQL.
+*   Experienced in writing purpose-built Kubernetes Operators.
 
 ## Coding
-*   HCL (Terraform, Packer), Ansible, Jenkins declarative pipelines, Github Actions CI Syntax
-*   Non-Compiled/scripting languages: Python, Bash
-*   Version control via git
+*   Experience writing purpose-built Kubernetes Operators.
+*   HCL (Terraform, Packer), Ansible, Jenkins declarative pipelines, Github Actions CI Syntax.
+*   Non-Compiled/scripting languages: Python, Bash.
+*   Version control via git.
 
 # Work History
 
@@ -50,11 +53,11 @@ Feb 2014 - Oct 2018
 
 Systems Engineer
 
-*    Windows Administration and Linux Administration
-*    Exchange, Hyper-V, SCCM, SQL Server, Active Directory,
-*    Server 2003, 2008, 2012 (R2), 2016
-*    Ubuntu, CentOS, LAMP, basic web development
-*    Virtualization Experiencing including VMware and Hyper-V
+*    Windows Administration and Linux Administration.
+*    Exchange, Hyper-V, SCCM, SQL Server, Active Directory.
+*    Server 2003, 2008, 2012 (R2), 2016.
+*    Ubuntu, CentOS, LAMP, basic web development.
+*    Virtualization Experiencing including VMware and Hyper-V.
 
 # Education
 ## Bachelor of Science in Cyber Security, minor in Computer Science
