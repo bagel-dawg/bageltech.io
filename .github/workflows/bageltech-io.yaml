@@ -38,6 +38,8 @@ jobs:
 
       - name: Test site for valid HTML
         run: |
+          ls -la
+          ls -la ./_site
           bundle exec htmlproofer ./_site --check-html --check-sri
 
       - name: Configure AWS credentials
