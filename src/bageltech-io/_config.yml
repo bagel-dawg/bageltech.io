@@ -15,6 +15,9 @@ github:
   tar_url: https://github.com/bagel-dawg/bageltech.io/tree/main/src/bageltech-io
   repository_url: https://github.com/bagel-dawg/bageltech.io/tree/main/src/bageltech-io
 
+gems:
+  - jekyll-pdf
+
 exclude:
   - "Gemfile"
   - "*.gemspec"
