@@ -5,7 +5,7 @@ resource "aws_iam_openid_connect_provider" "github_oidc_provider" {
     "sts.amazonaws.com",
   ]
 
-  thumbprint_list = ["6938fd4d98bab03faadb97b34396831e3780aea1"]
+  thumbprint_list = ["6938fd4d98bab03faadb97b34396831e3780aea1", "f879abce0008e4eb126e0097e46620f5aaae26ad", "1c58a3a8518e8759bf075b76b750d4f2df264fcd" ]
 }
 
 ##
@@ -25,9 +25,7 @@ resource "aws_iam_role" "cicd" {
       Condition = {
         "ForAnyValue:StringLike" = {
           "token.actions.githubusercontent.com:sub" : [
-            "repo:bagel-dawg/bageltech.io:ref:refs/tags/*",
-            "repo:bagel-dawg/bageltech.io:ref:refs/heads/main",
-            "repo:bagel-dawg/bageltech.io:ref:refs/heads/release*"
+            "repo:bagel-dawg/bageltech.io:*"
           ]
         }
       }
@@ -83,9 +81,7 @@ resource "aws_iam_role" "terraform" {
       Condition = {
         "ForAnyValue:StringLike" = {
           "token.actions.githubusercontent.com:sub" : [
-            "repo:bagel-dawg/bageltech.io:ref:refs/tags/*",
-            "repo:bagel-dawg/bageltech.io:ref:refs/heads/main",
-            "repo:bagel-dawg/bageltech.io:ref:refs/heads/release*"
+            "repo:bagel-dawg/bageltech.io:*"
           ]
         }
       }
