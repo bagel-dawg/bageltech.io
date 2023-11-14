@@ -32,7 +32,7 @@ jobs:
           bundle exec jekyll build 
 
       - name: Generate Resume PDF
-        uses: docker://pandoc/core:2.9
+        uses: docker://pandoc/latex:latest
         with:
           args: --output=src/bageltech-io/RyanKnauerResume.pdf --from=markdown src/bageltech-io/index.md
 
