@@ -51,3 +51,11 @@ jobs:
         if: github.event_name == 'release'
         run: | 
           aws --region us-east-1 s3 sync _site s3://bageltech-io --delete
+
+      - name: Upload Resume to release
+        if: github.event_name == 'release'
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file: RyanKnauerResume.pdf
+          asset_name: RyanKnauerResume.pdf
+          tag: ${{ github.ref }}
