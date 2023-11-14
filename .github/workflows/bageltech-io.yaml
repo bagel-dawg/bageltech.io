@@ -34,7 +34,7 @@ jobs:
       - name: Generate Resume PDF
         uses: docker://pandoc/core:2.9
         with:
-          args: --output=RyanKnauerResume.pdf --from=markdown index.md
+          args: --output=src/bageltech-io/RyanKnauerResume.pdf --from=markdown src/bageltech-io/index.md
 
       - name: Test site for valid HTML
         run: |
