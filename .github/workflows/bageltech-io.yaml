@@ -31,6 +31,11 @@ jobs:
         run: |
           bundle exec jekyll build 
 
+      - name: Generate Resume PDF
+        uses: docker://pandoc/core:2.9
+        with:
+          args: --output=RyanKnauerResume.pdf --from=markdown index.md
+
       - name: Test site for valid HTML
         run: |
           bundle exec htmlproofer ./_site --check-html --check-sri
