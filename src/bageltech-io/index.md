@@ -34,7 +34,7 @@ Principal Infrastructure Engineer, SRE Team
 *    Provided site reliability for customers running in Swimlane's Dedicated Cloud and Turbine Cloud platform.
 *    Managed multi-region cloud-native Kubernetes clusters containing hundereds of nodes per region.
 *    Managed dozens of individual Kubernetes clusters with hundereds of individual nodes combined.
-*    Provided last-escelation level support for the on-prem version of the Swimlane product deployed on top of a kubeadm-based distro + KOTS.
+*    Provided last-escalation level support for the on-prem version of the Swimlane product deployed on top of a kubeadm-based distro + KOTS.
 *    Write and maintain internal tooling to enable observability and to tackle operational pain points.
 
 ## Alion Science and Technology
