@@ -29,7 +29,7 @@ I aim to be a dedicated force multiplier for engineering and development teams b
 *   Non-Compiled/scripting languages: Python, Bash.
 *   GitOps centric CICD design.
 
-Observability and Security
+## Observability and Security
 *   Exceptional ability to comprehend complex systems in order to effectively troubleshoot and analyze them quickly.
 *   Prometheus, Grafana, Loki, Promtail.
 *   Kibana, LogStash, Elastic Agent, ElasticSearch.
