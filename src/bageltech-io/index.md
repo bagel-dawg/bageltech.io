@@ -1,26 +1,41 @@
 ---
 layout: default
 ---
+# Professional Summary
+Experienced Senior Infrastructure Engineer with a decade-long track record of excellence in crafting and maintaining robust systems.
+
+I aim to be a dedicated force multiplier for engineering and development teams by leveraging a passion for DevOps methodologies to architect and implement reliable, scalable solutions. Committed to driving efficiency, resilience, and innovation.
+
 # Qualifications
 
 ## Amazon Web Services (AWS)
+*   Extensive experience using AWS for microservice architecture.
 *   EC2, EKS, IAM, SSO, S3.
-*   VPC, Transit Gateway, Network Firewall.
-*   Functional experience using AWS and serverless architecture.
-*   Cloud Cost: EC2 Spot Fleet, AWS EC2 Savings Plan, KubeCost.
+*   VPC, Transit Gateway.
+*   RDS Aurora
+*   Lambda, Aurora Serverless, DynamoDB
+*   Cloud Cost: Cost Explorer, EC2 Spot Fleet, AWS EC2 Savings Plan, KubeCost.
 
 ## Kubernetes
+*   Broad Experience in architecting solutions on Kubernetes, from-scratch or for legacy application migration efforts.
 *   EKS, AKS, kubeadm-based on-prem deployments.
 *   ArgoCD, Kustomize, Helm, FluxCD.
-*   Karpenter, Prometheus, ExternalSecrets, Velero.
-*   Experienceed in managing stateful and stateless workloads: MongoDB, RabbitMQ, PostgreSQL.
-*   Experienced in writing purpose-built Kubernetes Operators.
+*   Experienced in managing stateful and stateless workloads: MongoDB, RabbitMQ, PostgreSQL.
 
 ## Coding
-*   Experience writing purpose-built Kubernetes Operators.
+*   Comprehensive experience writing and maintaining internal tooling to eliminate procedural friction.
+*   Purpose-built Kubernetes Operators.
 *   HCL (Terraform, Packer), Ansible, Jenkins declarative pipelines, Github Actions CI Syntax.
 *   Non-Compiled/scripting languages: Python, Bash.
-*   Version control via git.
+*   GitOps centric CICD design.
+
+Observability and Security
+*   Exceptional ability to comprehend complex systems in order to effectively troubleshoot and analyze them quickly.
+*   Prometheus, Grafana, Loki, Promtail.
+*   Kibana, LogStash, Elastic Agent, ElasticSearch.
+*   Lacework, Neuvector, AWS Network Firewall.
+
+## 
 
 # Work History
 
@@ -32,10 +47,10 @@ Principal Infrastructure Engineer, SRE Team
 *    Designed and Maintained CICD pipelines on Github Actions with custom ephemeral EC2-based self-hosted agents.
 *    Ground-up design and implementation of the Swimlane Cloud and Turbine Cloud Kubernetes platforms across 8 regions.
 *    Provided site reliability for customers running in Swimlane's Dedicated Cloud and Turbine Cloud platform.
-*    Managed multi-region cloud-native Kubernetes clusters containing hundereds of nodes per region.
-*    Managed dozens of individual Kubernetes clusters with hundereds of individual nodes combined.
+*    Designed and Supported multi-region cloud-native Kubernetes clusters containing hundereds of nodes per region.
+*    Designed and Supported dozens of individual Kubernetes clusters with hundereds of individual nodes combined.
 *    Provided last-escalation level support for the on-prem version of the Swimlane product deployed on top of a kubeadm-based distro + KOTS.
-*    Write and maintain internal tooling to enable observability and to tackle operational pain points.
+*    Written and maintained internal tooling to enable observability and to tackle operational pain points.
 
 ## Alion Science and Technology
 Oct 2018 - June 2019
