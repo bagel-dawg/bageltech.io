@@ -2,7 +2,7 @@
 layout: default
 ---
 # Professional Summary
-Experienced Senior Infrastructure Engineer with a decade-long track record of excellence in crafting and maintaining robust systems.
+Experienced Principal Infrastructure and Site Reliability Engineer with a decade-long track record of excellence in crafting and maintaining robust systems.
 
 I aim to be a dedicated force multiplier for engineering and development teams by leveraging a passion for DevOps methodologies to architect and implement reliable, scalable solutions. Committed to driving efficiency, resilience, and innovation.
 
